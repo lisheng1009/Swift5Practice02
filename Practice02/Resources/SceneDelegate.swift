@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = guideVC
         self.window?.makeKeyAndVisible()
         guideVC.enterMain = {
-            self.window?.rootViewController = MainViewController()
+            self.window?.rootViewController = MainController()
         }
         
         guideVC.enterLog = {

@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34325A238D6C5C00A68F62 /* LoginViewController.swift */; };
 		1A34325D238D6C5C00A68F62 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A34325B238D6C5C00A68F62 /* LoginViewController.xib */; };
+		1A5479C2238D767C00B609BC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C1238D767C00B609BC /* MainController.swift */; };
+		1A5479C5238D770F00B609BC /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C3238D770F00B609BC /* MyViewController.swift */; };
+		1A5479C6238D770F00B609BC /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479C4238D770F00B609BC /* MyViewController.xib */; };
+		1A5479CA238D783400B609BC /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C8238D783400B609BC /* NetworkTool.swift */; };
+		1A5479CB238D783400B609BC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C9238D783400B609BC /* API.swift */; };
+		1A5479CD238D789300B609BC /* QiuBaiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479CC238D789300B609BC /* QiuBaiModel.swift */; };
+		1A5479D0238D797700B609BC /* QiuBaiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479CE238D797700B609BC /* QiuBaiTableViewCell.xib */; };
+		1A5479D1238D797700B609BC /* QiuBaiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */; };
 		1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52A6A2385A02700408E47 /* AppDelegate.swift */; };
 		1AE52A6D2385A02700408E47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52A6C2385A02700408E47 /* SceneDelegate.swift */; };
 		1AE52A742385A02800408E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE52A732385A02800408E47 /* Assets.xcassets */; };
@@ -17,13 +25,20 @@
 		1AE52A852385A9AD00408E47 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE52A832385A9AD00408E47 /* GuideViewController.xib */; };
 		1AE52A872385AD2F00408E47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52A862385AD2F00408E47 /* HomeViewController.swift */; };
 		1AE52AAC2385B2E000408E47 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52AAB2385B2E000408E47 /* Constants.swift */; };
-		1AE52AAE2386F21800408E47 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52AAD2386F21800408E47 /* MainViewController.swift */; };
 		7B9BDEF3B6D76602F57D621A /* Pods_Practice02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DB242D057FAD221922A4D3 /* Pods_Practice02.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A34325A238D6C5C00A68F62 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A34325B238D6C5C00A68F62 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		1A5479C1238D767C00B609BC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		1A5479C3238D770F00B609BC /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		1A5479C4238D770F00B609BC /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		1A5479C8238D783400B609BC /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		1A5479C9238D783400B609BC /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1A5479CC238D789300B609BC /* QiuBaiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiuBaiModel.swift; sourceTree = "<group>"; };
+		1A5479CE238D797700B609BC /* QiuBaiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QiuBaiTableViewCell.xib; sourceTree = "<group>"; };
+		1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiuBaiTableViewCell.swift; sourceTree = "<group>"; };
 		1A646BFE238D5F10005BFDBF /* Practice02-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Practice02-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AE52A672385A02700408E47 /* Practice02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE52A6A2385A02700408E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +50,6 @@
 		1AE52A832385A9AD00408E47 /* GuideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
 		1AE52A862385AD2F00408E47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1AE52AAB2385B2E000408E47 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1AE52AAD2386F21800408E47 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		328BD49E7A991304941051A9 /* Pods-Practice02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice02.release.xcconfig"; path = "Target Support Files/Pods-Practice02/Pods-Practice02.release.xcconfig"; sourceTree = "<group>"; };
 		499029D84B692BAC361D10BC /* Pods-Practice02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice02.debug.xcconfig"; path = "Target Support Files/Pods-Practice02/Pods-Practice02.debug.xcconfig"; sourceTree = "<group>"; };
 		79DB242D057FAD221922A4D3 /* Pods_Practice02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Practice02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,13 +82,27 @@
 			isa = PBXGroup;
 			children = (
 				1AE52A862385AD2F00408E47 /* HomeViewController.swift */,
+				1A5479C3238D770F00B609BC /* MyViewController.swift */,
+				1A5479C4238D770F00B609BC /* MyViewController.xib */,
 				1AE52A822385A9AD00408E47 /* GuideViewController.swift */,
 				1AE52A832385A9AD00408E47 /* GuideViewController.xib */,
 				1A34325A238D6C5C00A68F62 /* LoginViewController.swift */,
 				1A34325B238D6C5C00A68F62 /* LoginViewController.xib */,
-				1AE52AAD2386F21800408E47 /* MainViewController.swift */,
+				1A5479C1238D767C00B609BC /* MainController.swift */,
+				1A5479CC238D789300B609BC /* QiuBaiModel.swift */,
+				1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */,
+				1A5479CE238D797700B609BC /* QiuBaiTableViewCell.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		1A5479C7238D783400B609BC /* NetworkTools */ = {
+			isa = PBXGroup;
+			children = (
+				1A5479C8238D783400B609BC /* NetworkTool.swift */,
+				1A5479C9238D783400B609BC /* API.swift */,
+			);
+			path = NetworkTools;
 			sourceTree = "<group>";
 		};
 		1AE52A5E2385A02700408E47 = {
@@ -99,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				1A34325E238D6D2B00A68F62 /* Resources */,
+				1A5479C7238D783400B609BC /* NetworkTools */,
 				1AE52AA82385B2C300408E47 /* Util */,
 				1A34325F238D6D5A00A68F62 /* Main */,
 				1AE52A782385A02900408E47 /* Info.plist */,
@@ -193,10 +222,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5479D0238D797700B609BC /* QiuBaiTableViewCell.xib in Resources */,
 				1A34325D238D6C5C00A68F62 /* LoginViewController.xib in Resources */,
 				1AE52A772385A02900408E47 /* LaunchScreen.storyboard in Resources */,
 				1AE52A742385A02800408E47 /* Assets.xcassets in Resources */,
 				1AE52A852385A9AD00408E47 /* GuideViewController.xib in Resources */,
+				1A5479C6238D770F00B609BC /* MyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,12 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5479C2238D767C00B609BC /* MainController.swift in Sources */,
+				1A5479CA238D783400B609BC /* NetworkTool.swift in Sources */,
+				1A5479D1238D797700B609BC /* QiuBaiTableViewCell.swift in Sources */,
 				1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */,
 				1AE52AAC2385B2E000408E47 /* Constants.swift in Sources */,
+				1A5479CB238D783400B609BC /* API.swift in Sources */,
 				1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */,
 				1AE52A6D2385A02700408E47 /* SceneDelegate.swift in Sources */,
-				1AE52AAE2386F21800408E47 /* MainViewController.swift in Sources */,
 				1AE52A842385A9AD00408E47 /* GuideViewController.swift in Sources */,
+				1A5479CD238D789300B609BC /* QiuBaiModel.swift in Sources */,
+				1A5479C5238D770F00B609BC /* MyViewController.swift in Sources */,
 				1AE52A872385AD2F00408E47 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
