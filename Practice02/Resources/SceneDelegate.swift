@@ -27,9 +27,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guideVC.enterLog = {
            
-            self.window?.rootViewController = LoginViewController()
+            let navi = UINavigationController(rootViewController: LoginViewController())
+            self.window?.rootViewController = navi
         }
+        
+        let notName = Notification.Name(rawValue: "changeTopBar")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadData), name: notName, object: nil)
 
+    }
+    
+    @objc func reloadData(){
+        self.window?.rootViewController = MainController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

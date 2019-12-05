@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34325A238D6C5C00A68F62 /* LoginViewController.swift */; };
 		1A34325D238D6C5C00A68F62 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A34325B238D6C5C00A68F62 /* LoginViewController.xib */; };
+		1A35FB4F2398996E00A81B9A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */; };
 		1A5479C2238D767C00B609BC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C1238D767C00B609BC /* MainController.swift */; };
 		1A5479C5238D770F00B609BC /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C3238D770F00B609BC /* MyViewController.swift */; };
 		1A5479C6238D770F00B609BC /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479C4238D770F00B609BC /* MyViewController.xib */; };
@@ -17,6 +18,8 @@
 		1A5479CD238D789300B609BC /* QiuBaiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479CC238D789300B609BC /* QiuBaiModel.swift */; };
 		1A5479D0238D797700B609BC /* QiuBaiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479CE238D797700B609BC /* QiuBaiTableViewCell.xib */; };
 		1A5479D1238D797700B609BC /* QiuBaiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */; };
+		1A5479D5238D8FC900B609BC /* OrdinaryLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479D3238D8FC900B609BC /* OrdinaryLoginViewController.swift */; };
+		1A5479D6238D8FC900B609BC /* OrdinaryLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479D4238D8FC900B609BC /* OrdinaryLoginViewController.xib */; };
 		1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52A6A2385A02700408E47 /* AppDelegate.swift */; };
 		1AE52A6D2385A02700408E47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52A6C2385A02700408E47 /* SceneDelegate.swift */; };
 		1AE52A742385A02800408E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE52A732385A02800408E47 /* Assets.xcassets */; };
@@ -31,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1A34325A238D6C5C00A68F62 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A34325B238D6C5C00A68F62 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1A5479C1238D767C00B609BC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		1A5479C3238D770F00B609BC /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		1A5479C4238D770F00B609BC /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -39,6 +43,8 @@
 		1A5479CC238D789300B609BC /* QiuBaiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiuBaiModel.swift; sourceTree = "<group>"; };
 		1A5479CE238D797700B609BC /* QiuBaiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QiuBaiTableViewCell.xib; sourceTree = "<group>"; };
 		1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiuBaiTableViewCell.swift; sourceTree = "<group>"; };
+		1A5479D3238D8FC900B609BC /* OrdinaryLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdinaryLoginViewController.swift; sourceTree = "<group>"; };
+		1A5479D4238D8FC900B609BC /* OrdinaryLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdinaryLoginViewController.xib; sourceTree = "<group>"; };
 		1A646BFE238D5F10005BFDBF /* Practice02-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Practice02-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AE52A672385A02700408E47 /* Practice02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE52A6A2385A02700408E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 			children = (
 				1AE52A6A2385A02700408E47 /* AppDelegate.swift */,
 				1AE52A6C2385A02700408E47 /* SceneDelegate.swift */,
+				1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */,
 				1AE52A732385A02800408E47 /* Assets.xcassets */,
 				1AE52A752385A02900408E47 /* LaunchScreen.storyboard */,
 			);
@@ -81,13 +88,12 @@
 		1A34325F238D6D5A00A68F62 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1A5479D2238D8F5000B609BC /* Login */,
 				1AE52A862385AD2F00408E47 /* HomeViewController.swift */,
 				1A5479C3238D770F00B609BC /* MyViewController.swift */,
 				1A5479C4238D770F00B609BC /* MyViewController.xib */,
 				1AE52A822385A9AD00408E47 /* GuideViewController.swift */,
 				1AE52A832385A9AD00408E47 /* GuideViewController.xib */,
-				1A34325A238D6C5C00A68F62 /* LoginViewController.swift */,
-				1A34325B238D6C5C00A68F62 /* LoginViewController.xib */,
 				1A5479C1238D767C00B609BC /* MainController.swift */,
 				1A5479CC238D789300B609BC /* QiuBaiModel.swift */,
 				1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */,
@@ -103,6 +109,17 @@
 				1A5479C9238D783400B609BC /* API.swift */,
 			);
 			path = NetworkTools;
+			sourceTree = "<group>";
+		};
+		1A5479D2238D8F5000B609BC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1A34325A238D6C5C00A68F62 /* LoginViewController.swift */,
+				1A34325B238D6C5C00A68F62 /* LoginViewController.xib */,
+				1A5479D3238D8FC900B609BC /* OrdinaryLoginViewController.swift */,
+				1A5479D4238D8FC900B609BC /* OrdinaryLoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		1AE52A5E2385A02700408E47 = {
@@ -224,6 +241,7 @@
 			files = (
 				1A5479D0238D797700B609BC /* QiuBaiTableViewCell.xib in Resources */,
 				1A34325D238D6C5C00A68F62 /* LoginViewController.xib in Resources */,
+				1A5479D6238D8FC900B609BC /* OrdinaryLoginViewController.xib in Resources */,
 				1AE52A772385A02900408E47 /* LaunchScreen.storyboard in Resources */,
 				1AE52A742385A02800408E47 /* Assets.xcassets in Resources */,
 				1AE52A852385A9AD00408E47 /* GuideViewController.xib in Resources */,
@@ -301,6 +319,8 @@
 				1A5479CB238D783400B609BC /* API.swift in Sources */,
 				1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */,
 				1AE52A6D2385A02700408E47 /* SceneDelegate.swift in Sources */,
+				1A35FB4F2398996E00A81B9A /* BaseNavigationController.swift in Sources */,
+				1A5479D5238D8FC900B609BC /* OrdinaryLoginViewController.swift in Sources */,
 				1AE52A842385A9AD00408E47 /* GuideViewController.swift in Sources */,
 				1A5479CD238D789300B609BC /* QiuBaiModel.swift in Sources */,
 				1A5479C5238D770F00B609BC /* MyViewController.swift in Sources */,

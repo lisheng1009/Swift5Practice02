@@ -34,6 +34,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="toLogin:" destination="-1" eventType="touchUpInside" id="cnd-rY-MFR"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-HB-ivu">
                     <rect key="frame" x="87.5" y="436" width="200" height="35"/>
