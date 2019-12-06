@@ -12,6 +12,9 @@ target 'Practice02' do
   pod "MJRefresh"
   pod "Alamofire"
   pod 'HandyJSON',:git => 'https://github.com/alibaba/HandyJSON.git', :branch => 'dev_for_swift5.0'
-
+  
+  
+  pod 'RxSwift'
+  pod 'Moya/RxSwift', '~> 13.0'
 
 end

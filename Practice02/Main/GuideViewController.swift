@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
 
 class GuideViewController: UIViewController {
 
@@ -41,6 +43,123 @@ class GuideViewController: UIViewController {
 
         setupButtons()
         setupScrollview()
+        testMoya()
+//        testMoya2()
+    }
+    
+    
+    ///加上请求错误判断
+    func testMoya2(){
+        ///加上错误判断
+        print("testMoya-error")
+        let provider = MoyaProvider<SongService>(plugins:[NetworkLoggerPlugin()])
+         provider.request(.detail(id: "100000")) { (result) in
+             switch result {
+             case let .success(response):
+                 //请求成功
+                 let data = response.data
+                 let code = response.statusCode
+                 
+                 //将data转为字符串
+                 let dataString=String(data: data, encoding: .utf8)
+                 
+                 print("RegisterController request sheet detail success:\(code),\(dataString)")
+                 
+             case let .failure(error):
+                 //请求失败
+                 print("RegisterController request sheet detail failed:\(error)")
+                 
+                 //错误类型转为MoyaError
+                 let error=error as! MoyaError
+                 
+                 //MoyaError是一个枚举
+                 switch error {
+                 case .imageMapping(let response):
+                     print("图片解析错误")
+                 case .jsonMapping(let response):
+                     print("JSON解析错误")
+                 case .statusCode(let response):
+                     print("状态错误")
+                 case .stringMapping(let response):
+                     print("字符串映射错误")
+                 case .underlying(let nsError as NSError, let response):
+                     print("这里将错误转为了NSError")
+         
+               switch nsError.code {
+                 case NSURLErrorNotConnectedToInternet:
+                     print("网络不太好，请稍后再试！")
+                 case NSURLErrorTimedOut:
+                     print("连接超时，请稍后再试！")
+                 default:
+                     print("未知错误，请稍后再试！")
+                 }
+                 
+             case .objectMapping(_, _):
+                 print("对象解码错误")
+             case .encodableMapping(_):
+                 print("对象编码错误")
+             case .requestMapping(_):
+                 print("请求映射错误")
+             case .parameterEncoding(_):
+                 print("参数编码错误")
+             }
+             
+         }
+         
+         }
+         
+        
+    }
+    
+    func testMoya(){
+        print("testMoya")
+        
+        
+        //moya插件
+        let networkActivityPlugin=NetworkActivityPlugin(networkActivityClosure: { (changeType, targetType) in
+            //changeType类型是NetworkActivityChangeType
+            //通过它能监听到开始请求和结束请求
+            
+            //targetType类型是TargetType
+            //就是我们这里的service
+            //通过它能判断是那个请求
+            
+            if NetworkActivityChangeType.began==changeType{
+                //开始请求
+                print("began request:\(targetType.path)")
+                //可以放置请求动画  转圈
+            }else{
+                //结束请求
+                print("end request:\(targetType.path)")
+                //移除请求动画
+            }
+            
+        })
+        
+        
+        
+        
+        
+        let provider = MoyaProvider<SongService>(plugins:[NetworkLoggerPlugin(),networkActivityPlugin])
+        provider.request(.detail(id: "1")) { (result) in
+            //result类型是Result<Response, MoyaError>
+            switch result {
+            case let .success(response):
+                //请求成功
+                let data = response.data
+                let code = response.statusCode
+
+                //将data转为String
+                //data的类型为Data
+                let dataString = String(data: data, encoding: String.Encoding.utf8)
+                print("RegisterController request song detail succes:\(code),\(dataString)")
+            case let .failure(error):
+                //请求失败
+                print("RegisterController request song detail failed:\(error)")
+            }
+        }
+        
+        
     }
     
     func setupScrollview(){

@@ -32,11 +32,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         let notName = Notification.Name(rawValue: "changeTopBar")
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadData), name: notName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.enterMain), name: notName, object: nil)
 
     }
     
-    @objc func reloadData(){
+    @objc func enterMain(){
         self.window?.rootViewController = MainController()
     }
 

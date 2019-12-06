@@ -17,6 +17,8 @@ class OrdinaryLoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func toLogin(_ sender: Any) {
         
+        //TODO: 注册登录逻辑里可以使用guard
+        
         if phoneTextField.text == "" {
             alert.message = "手机号码不能为空"
             self.present(alert, animated: true, completion: nil)
@@ -33,6 +35,7 @@ class OrdinaryLoginViewController: UIViewController {
             
             //需要验证 暂时省略
             //TODO
+            
             let alert2 = UIAlertController(title: "", message: "登录成功", preferredStyle: .alert)
             self.present(alert2, animated: true, completion: nil)
             

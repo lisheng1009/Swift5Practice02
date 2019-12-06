@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34325A238D6C5C00A68F62 /* LoginViewController.swift */; };
 		1A34325D238D6C5C00A68F62 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A34325B238D6C5C00A68F62 /* LoginViewController.xib */; };
 		1A35FB4F2398996E00A81B9A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */; };
+		1A35FB51239A132600A81B9A /* NewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB50239A132600A81B9A /* NewAPI.swift */; };
 		1A5479C2238D767C00B609BC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C1238D767C00B609BC /* MainController.swift */; };
 		1A5479C5238D770F00B609BC /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C3238D770F00B609BC /* MyViewController.swift */; };
 		1A5479C6238D770F00B609BC /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479C4238D770F00B609BC /* MyViewController.xib */; };
@@ -35,6 +36,7 @@
 		1A34325A238D6C5C00A68F62 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A34325B238D6C5C00A68F62 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		1A35FB50239A132600A81B9A /* NewAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAPI.swift; sourceTree = "<group>"; };
 		1A5479C1238D767C00B609BC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		1A5479C3238D770F00B609BC /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		1A5479C4238D770F00B609BC /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				1A5479C8238D783400B609BC /* NetworkTool.swift */,
 				1A5479C9238D783400B609BC /* API.swift */,
+				1A35FB50239A132600A81B9A /* NewAPI.swift */,
 			);
 			path = NetworkTools;
 			sourceTree = "<group>";
@@ -258,24 +261,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Practice02/Pods-Practice02-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Practice02/Pods-Practice02-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Practice02/Pods-Practice02-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -317,6 +307,7 @@
 				1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */,
 				1AE52AAC2385B2E000408E47 /* Constants.swift in Sources */,
 				1A5479CB238D783400B609BC /* API.swift in Sources */,
+				1A35FB51239A132600A81B9A /* NewAPI.swift in Sources */,
 				1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */,
 				1AE52A6D2385A02700408E47 /* SceneDelegate.swift in Sources */,
 				1A35FB4F2398996E00A81B9A /* BaseNavigationController.swift in Sources */,
