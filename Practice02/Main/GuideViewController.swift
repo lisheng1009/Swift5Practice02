@@ -11,7 +11,7 @@ import Moya
 import RxSwift
 
 class GuideViewController: UIViewController {
-
+    
     @IBOutlet weak var logBtn: UIButton!
     
     @IBOutlet weak var enterBtn: UIButton!
@@ -30,7 +30,7 @@ class GuideViewController: UIViewController {
             self.enterLog!()
         }
     }
-
+    
     var enterMain: (() -> ())?
     var enterLog: (() -> ())?
     
@@ -40,11 +40,57 @@ class GuideViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupButtons()
         setupScrollview()
-        testMoya()
-//        testMoya2()
+        
+        ///1. moya简单使用
+        //        testMoya()
+        
+        ///2. moya使用 +  错误处理
+        //        testMoya2()
+        
+        ///3. moya + Rxswift 简单使用
+//        moyaRxSwift()
+        
+        ///4.handyJSON
+        handyJSON()
+    }
+    
+    func handyJSON(){
+        let provider = MoyaProvider<SongService>()
+        provider.rx
+            .request(.detail(id: "20"))
+            .asObservable()
+            .mapModel(SongWrapper.self).subscribe(onNext: { (model) in
+                print(model.data.title!)
+                print(model.data.user?.nickname! ?? "")
+            })
+    }
+    
+    
+    func moyaRxSwift(){
+        let provider = MoyaProvider<SongService>()
+        provider
+            .rx
+            .request(.detail(id: "1"))
+            .subscribe(onSuccess: { (response) in
+            //请求成功
+            let data = response.data
+            let code = response.statusCode
+            
+            //将data转为字符串
+            let dataString=String(data: data, encoding: .utf8)
+            
+            print("RegisterController request sheet detail success:\(code),\(dataString)")
+            
+            let sheetWrapper = SongWrapper.deserialize(from: dataString)
+                print(sheetWrapper?.data.title!)
+                
+                
+        }) { (error) in
+            print(error)
+        }
     }
     
     
@@ -53,61 +99,61 @@ class GuideViewController: UIViewController {
         ///加上错误判断
         print("testMoya-error")
         let provider = MoyaProvider<SongService>(plugins:[NetworkLoggerPlugin()])
-         provider.request(.detail(id: "100000")) { (result) in
-             switch result {
-             case let .success(response):
-                 //请求成功
-                 let data = response.data
-                 let code = response.statusCode
-                 
-                 //将data转为字符串
-                 let dataString=String(data: data, encoding: .utf8)
-                 
-                 print("RegisterController request sheet detail success:\(code),\(dataString)")
-                 
-             case let .failure(error):
-                 //请求失败
-                 print("RegisterController request sheet detail failed:\(error)")
-                 
-                 //错误类型转为MoyaError
-                 let error=error as! MoyaError
-                 
-                 //MoyaError是一个枚举
-                 switch error {
-                 case .imageMapping(let response):
-                     print("图片解析错误")
-                 case .jsonMapping(let response):
-                     print("JSON解析错误")
-                 case .statusCode(let response):
-                     print("状态错误")
-                 case .stringMapping(let response):
-                     print("字符串映射错误")
-                 case .underlying(let nsError as NSError, let response):
-                     print("这里将错误转为了NSError")
-         
-               switch nsError.code {
-                 case NSURLErrorNotConnectedToInternet:
-                     print("网络不太好，请稍后再试！")
-                 case NSURLErrorTimedOut:
-                     print("连接超时，请稍后再试！")
-                 default:
-                     print("未知错误，请稍后再试！")
-                 }
-                 
-             case .objectMapping(_, _):
-                 print("对象解码错误")
-             case .encodableMapping(_):
-                 print("对象编码错误")
-             case .requestMapping(_):
-                 print("请求映射错误")
-             case .parameterEncoding(_):
-                 print("参数编码错误")
-             }
-             
-         }
-         
-         }
-         
+        provider.request(.detail(id: "100000")) { (result) in
+            switch result {
+            case let .success(response):
+                //请求成功
+                let data = response.data
+                let code = response.statusCode
+                
+                //将data转为字符串
+                let dataString=String(data: data, encoding: .utf8)
+                
+                print("RegisterController request sheet detail success:\(code),\(dataString)")
+                
+            case let .failure(error):
+                //请求失败
+                print("RegisterController request sheet detail failed:\(error)")
+                
+                //错误类型转为MoyaError
+                let error=error as! MoyaError
+                
+                //MoyaError是一个枚举
+                switch error {
+                case .imageMapping(let response):
+                    print("图片解析错误")
+                case .jsonMapping(let response):
+                    print("JSON解析错误")
+                case .statusCode(let response):
+                    print("状态错误")
+                case .stringMapping(let response):
+                    print("字符串映射错误")
+                case .underlying(let nsError as NSError, let response):
+                    print("这里将错误转为了NSError")
+                    
+                    switch nsError.code {
+                    case NSURLErrorNotConnectedToInternet:
+                        print("网络不太好，请稍后再试！")
+                    case NSURLErrorTimedOut:
+                        print("连接超时，请稍后再试！")
+                    default:
+                        print("未知错误，请稍后再试！")
+                    }
+                    
+                case .objectMapping(_, _):
+                    print("对象解码错误")
+                case .encodableMapping(_):
+                    print("对象编码错误")
+                case .requestMapping(_):
+                    print("请求映射错误")
+                case .parameterEncoding(_):
+                    print("参数编码错误")
+                }
+                
+            }
+            
+        }
+        
         
     }
     
@@ -148,7 +194,7 @@ class GuideViewController: UIViewController {
                 //请求成功
                 let data = response.data
                 let code = response.statusCode
-
+                
                 //将data转为String
                 //data的类型为Data
                 let dataString = String(data: data, encoding: String.Encoding.utf8)
@@ -194,7 +240,7 @@ class GuideViewController: UIViewController {
         scroll.setContentOffset(CGPoint(x: Int(view.bounds.width) * pageControl.currentPage, y: 0), animated: true)
         print(pageControl.currentPage)
     }
-
+    
     func setupButtons(){
         enterBtn.layer.cornerRadius = CGFloat(SIZE_MAINBUTTON_RADIUS)
         enterBtn.clipsToBounds = true

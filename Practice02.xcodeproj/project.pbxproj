@@ -11,6 +11,9 @@
 		1A34325D238D6C5C00A68F62 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A34325B238D6C5C00A68F62 /* LoginViewController.xib */; };
 		1A35FB4F2398996E00A81B9A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */; };
 		1A35FB51239A132600A81B9A /* NewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB50239A132600A81B9A /* NewAPI.swift */; };
+		1A35FB55239A790C00A81B9A /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB54239A790C00A81B9A /* SongModel.swift */; };
+		1A35FB57239A973100A81B9A /* APIRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB56239A973100A81B9A /* APIRequestExtension.swift */; };
+		1A35FB59239A9C5C00A81B9A /* SongWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB58239A9C5C00A81B9A /* SongWrapper.swift */; };
 		1A5479C2238D767C00B609BC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C1238D767C00B609BC /* MainController.swift */; };
 		1A5479C5238D770F00B609BC /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C3238D770F00B609BC /* MyViewController.swift */; };
 		1A5479C6238D770F00B609BC /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479C4238D770F00B609BC /* MyViewController.xib */; };
@@ -37,6 +40,9 @@
 		1A34325B238D6C5C00A68F62 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1A35FB50239A132600A81B9A /* NewAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAPI.swift; sourceTree = "<group>"; };
+		1A35FB54239A790C00A81B9A /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
+		1A35FB56239A973100A81B9A /* APIRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestExtension.swift; sourceTree = "<group>"; };
+		1A35FB58239A9C5C00A81B9A /* SongWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongWrapper.swift; sourceTree = "<group>"; };
 		1A5479C1238D767C00B609BC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		1A5479C3238D770F00B609BC /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		1A5479C4238D770F00B609BC /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 				1AE52A822385A9AD00408E47 /* GuideViewController.swift */,
 				1AE52A832385A9AD00408E47 /* GuideViewController.xib */,
 				1A5479C1238D767C00B609BC /* MainController.swift */,
+				1A35FB54239A790C00A81B9A /* SongModel.swift */,
+				1A35FB58239A9C5C00A81B9A /* SongWrapper.swift */,
 				1A5479CC238D789300B609BC /* QiuBaiModel.swift */,
 				1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */,
 				1A5479CE238D797700B609BC /* QiuBaiTableViewCell.xib */,
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				1AE52AAB2385B2E000408E47 /* Constants.swift */,
+				1A35FB56239A973100A81B9A /* APIRequestExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -301,11 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A35FB59239A9C5C00A81B9A /* SongWrapper.swift in Sources */,
 				1A5479C2238D767C00B609BC /* MainController.swift in Sources */,
 				1A5479CA238D783400B609BC /* NetworkTool.swift in Sources */,
+				1A35FB55239A790C00A81B9A /* SongModel.swift in Sources */,
 				1A5479D1238D797700B609BC /* QiuBaiTableViewCell.swift in Sources */,
 				1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */,
 				1AE52AAC2385B2E000408E47 /* Constants.swift in Sources */,
+				1A35FB57239A973100A81B9A /* APIRequestExtension.swift in Sources */,
 				1A5479CB238D783400B609BC /* API.swift in Sources */,
 				1A35FB51239A132600A81B9A /* NewAPI.swift in Sources */,
 				1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */,
