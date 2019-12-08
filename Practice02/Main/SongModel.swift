@@ -54,8 +54,8 @@ class userModel: HandyJSON {
     
     /// 头像
     var avatar:String?
-    
-    /// 性别
-    var gender:Int!
+//    
+//    /// 性别
+//    var gender:Int!
 }
 

@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  Practice02
+//  使用纯Alamofire进行网络请求, 手动解析JSON
 //
 //  Created by 安静清晨 on 2019/11/21.
 //  Copyright © 2019 walk-in-minds. All rights reserved.

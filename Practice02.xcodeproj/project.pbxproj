@@ -14,6 +14,7 @@
 		1A35FB55239A790C00A81B9A /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB54239A790C00A81B9A /* SongModel.swift */; };
 		1A35FB57239A973100A81B9A /* APIRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB56239A973100A81B9A /* APIRequestExtension.swift */; };
 		1A35FB59239A9C5C00A81B9A /* SongWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB58239A9C5C00A81B9A /* SongWrapper.swift */; };
+		1A35FB5D239BF3E000A81B9A /* SLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB5C239BF3E000A81B9A /* SLError.swift */; };
 		1A5479C2238D767C00B609BC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C1238D767C00B609BC /* MainController.swift */; };
 		1A5479C5238D770F00B609BC /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479C3238D770F00B609BC /* MyViewController.swift */; };
 		1A5479C6238D770F00B609BC /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479C4238D770F00B609BC /* MyViewController.xib */; };
@@ -24,6 +25,8 @@
 		1A5479D1238D797700B609BC /* QiuBaiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */; };
 		1A5479D5238D8FC900B609BC /* OrdinaryLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5479D3238D8FC900B609BC /* OrdinaryLoginViewController.swift */; };
 		1A5479D6238D8FC900B609BC /* OrdinaryLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5479D4238D8FC900B609BC /* OrdinaryLoginViewController.xib */; };
+		1AD389BD239D2C85002F246C /* SongModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD389BC239D2C85002F246C /* SongModel2.swift */; };
+		1AD389BF239D341A002F246C /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD389BE239D341A002F246C /* MiddleViewController.swift */; };
 		1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52A6A2385A02700408E47 /* AppDelegate.swift */; };
 		1AE52A6D2385A02700408E47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE52A6C2385A02700408E47 /* SceneDelegate.swift */; };
 		1AE52A742385A02800408E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE52A732385A02800408E47 /* Assets.xcassets */; };
@@ -43,6 +46,7 @@
 		1A35FB54239A790C00A81B9A /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		1A35FB56239A973100A81B9A /* APIRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestExtension.swift; sourceTree = "<group>"; };
 		1A35FB58239A9C5C00A81B9A /* SongWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongWrapper.swift; sourceTree = "<group>"; };
+		1A35FB5C239BF3E000A81B9A /* SLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLError.swift; sourceTree = "<group>"; };
 		1A5479C1238D767C00B609BC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		1A5479C3238D770F00B609BC /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		1A5479C4238D770F00B609BC /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		1A5479D3238D8FC900B609BC /* OrdinaryLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdinaryLoginViewController.swift; sourceTree = "<group>"; };
 		1A5479D4238D8FC900B609BC /* OrdinaryLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdinaryLoginViewController.xib; sourceTree = "<group>"; };
 		1A646BFE238D5F10005BFDBF /* Practice02-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Practice02-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AD389BC239D2C85002F246C /* SongModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel2.swift; sourceTree = "<group>"; };
+		1AD389BE239D341A002F246C /* MiddleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
 		1AE52A672385A02700408E47 /* Practice02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE52A6A2385A02700408E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE52A6C2385A02700408E47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,12 +104,14 @@
 			children = (
 				1A5479D2238D8F5000B609BC /* Login */,
 				1AE52A862385AD2F00408E47 /* HomeViewController.swift */,
+				1AD389BE239D341A002F246C /* MiddleViewController.swift */,
 				1A5479C3238D770F00B609BC /* MyViewController.swift */,
 				1A5479C4238D770F00B609BC /* MyViewController.xib */,
 				1AE52A822385A9AD00408E47 /* GuideViewController.swift */,
 				1AE52A832385A9AD00408E47 /* GuideViewController.xib */,
 				1A5479C1238D767C00B609BC /* MainController.swift */,
 				1A35FB54239A790C00A81B9A /* SongModel.swift */,
+				1AD389BC239D2C85002F246C /* SongModel2.swift */,
 				1A35FB58239A9C5C00A81B9A /* SongWrapper.swift */,
 				1A5479CC238D789300B609BC /* QiuBaiModel.swift */,
 				1A5479CF238D797700B609BC /* QiuBaiTableViewCell.swift */,
@@ -118,6 +126,7 @@
 				1A5479C8238D783400B609BC /* NetworkTool.swift */,
 				1A5479C9238D783400B609BC /* API.swift */,
 				1A35FB50239A132600A81B9A /* NewAPI.swift */,
+				1A35FB5C239BF3E000A81B9A /* SLError.swift */,
 			);
 			path = NetworkTools;
 			sourceTree = "<group>";
@@ -312,14 +321,17 @@
 			files = (
 				1A35FB59239A9C5C00A81B9A /* SongWrapper.swift in Sources */,
 				1A5479C2238D767C00B609BC /* MainController.swift in Sources */,
+				1AD389BD239D2C85002F246C /* SongModel2.swift in Sources */,
 				1A5479CA238D783400B609BC /* NetworkTool.swift in Sources */,
 				1A35FB55239A790C00A81B9A /* SongModel.swift in Sources */,
 				1A5479D1238D797700B609BC /* QiuBaiTableViewCell.swift in Sources */,
+				1A35FB5D239BF3E000A81B9A /* SLError.swift in Sources */,
 				1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */,
 				1AE52AAC2385B2E000408E47 /* Constants.swift in Sources */,
 				1A35FB57239A973100A81B9A /* APIRequestExtension.swift in Sources */,
 				1A5479CB238D783400B609BC /* API.swift in Sources */,
 				1A35FB51239A132600A81B9A /* NewAPI.swift in Sources */,
+				1AD389BF239D341A002F246C /* MiddleViewController.swift in Sources */,
 				1AE52A6B2385A02700408E47 /* AppDelegate.swift in Sources */,
 				1AE52A6D2385A02700408E47 /* SceneDelegate.swift in Sources */,
 				1A35FB4F2398996E00A81B9A /* BaseNavigationController.swift in Sources */,

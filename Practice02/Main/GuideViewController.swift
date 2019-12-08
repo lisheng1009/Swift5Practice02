@@ -9,8 +9,10 @@
 import UIKit
 import Moya
 import RxSwift
+import HandyJSON
 
 class GuideViewController: UIViewController {
+    var songArray:[SongModel2]?
     
     @IBOutlet weak var logBtn: UIButton!
     
@@ -45,7 +47,7 @@ class GuideViewController: UIViewController {
         setupScrollview()
         
         ///1. moya简单使用
-        //        testMoya()
+//                testMoya()
         
         ///2. moya使用 +  错误处理
         //        testMoya2()
@@ -54,17 +56,104 @@ class GuideViewController: UIViewController {
 //        moyaRxSwift()
         
         ///4.handyJSON
-        handyJSON()
+//        handyJSON()
+        
+        ///5. 直接反序列化指定节点.
+//        pure()
+        
+        ///6. mapModel  error completed     observable改写
+//        six()
+        
+        ///7. try func mapObject<T: HandyJSON>(_ type: T.Type ,designatedPath: String) -> Observable<T?>
+//        seven()
+
+        
+        ///9. try modelArray from designatedPath
+//        nine()
     }
+    
+    func nine(){
+        let provider = MoyaProvider<SongService>()
+        provider
+            .rx
+            .request(.detail(id: "1"))
+            .asObservable()
+            .mapObjectArray(SongModel2.self, designatedPath: "data.songs").subscribe(onNext: { (res) in
+                print(res!)
+                self.songArray = res
+                }, onError: { (error) in
+                    
+                }, onCompleted: {
+                    
+                }) {
+                    
+            }
+        }
+    
+    
+    func seven(){
+        let provider = MoyaProvider<SongService>()
+        provider
+            .rx
+            .request(.detail(id: "1"))
+            .asObservable()
+            .mapObject(SongModel.self, designatedPath: "data")
+            .subscribe(onNext: { (res) in
+                print(res)
+            }, onError: { (error) in
+                
+            }, onCompleted: {
+                
+            }) {
+                
+        }
+    }
+    
+    
+    func six(){
+        let provider = MoyaProvider<SongService>()
+        provider
+            .rx
+            .request(.detail(id: "1"))
+            .asObservable()
+            .mapModel(SongWrapper.self)
+            .subscribe(onNext: { (res) in
+            print(res?.data!.description ?? "")
+        }, onError: { (error) in
+            print(error)
+        }, onCompleted: {
+            print("+++++++++completed")
+        })
+    }
+
+
+    
+    func pure(){
+        let provider = MoyaProvider<SongService>()
+        provider.rx.request(.detail(id: "1")).asObservable().subscribe(onNext: { (res) in
+            let st = String(data: res.data, encoding: .utf8)
+            if let songModel = JSONDeserializer<SongModel>.deserializeFrom(json: st, designatedPath: "data") {
+                print(songModel)
+            }
+        }, onError: { (error) in
+            print(error)
+        }, onCompleted: {
+            print("pure+++++++++completed")
+        })
+        
+
+    }
+    
+    
     
     func handyJSON(){
         let provider = MoyaProvider<SongService>()
         provider.rx
-            .request(.detail(id: "20"))
+            .request(.detail(id: "1"))
             .asObservable()
             .mapModel(SongWrapper.self).subscribe(onNext: { (model) in
-                print(model.data.title!)
-                print(model.data.user?.nickname! ?? "")
+                print(model?.data.title!)
+                print(model?.data.user?.nickname! ?? "")
             })
     }
     
@@ -78,7 +167,6 @@ class GuideViewController: UIViewController {
             //请求成功
             let data = response.data
             let code = response.statusCode
-            
             //将data转为字符串
             let dataString=String(data: data, encoding: .utf8)
             

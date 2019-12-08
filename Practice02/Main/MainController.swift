@@ -16,7 +16,7 @@ class MainController: UITabBarController {
         tabBar.barTintColor = UIColor.white
         
         addChild("首页", "home", "home_selected", HomeViewController.self)
-        
+        addChild("中间", "middle", "middle_selected", MiddleViewController.self)
         addChild("我的", "my", "my_selected", MyViewController.self)
     }
     
