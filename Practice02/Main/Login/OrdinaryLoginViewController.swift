@@ -22,7 +22,7 @@ class OrdinaryLoginViewController: UIViewController {
         if phoneTextField.text == "" {
             alert.message = "手机号码不能为空"
             self.present(alert, animated: true, completion: nil)
-        }else if phoneTextField.text?.count != 11 {
+        }else if !(phoneTextField.text?.isValidPhoneNum())! {
             alert.message = "请输入正确的手机号码"
             self.present(alert, animated: true, completion: nil)
         }else if passwordTextField.text == "" {

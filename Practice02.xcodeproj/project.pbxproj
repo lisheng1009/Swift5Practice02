@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A089690239E130E0079D8BE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08968F239E130E0079D8BE /* Extensions.swift */; };
 		1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34325A238D6C5C00A68F62 /* LoginViewController.swift */; };
 		1A34325D238D6C5C00A68F62 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A34325B238D6C5C00A68F62 /* LoginViewController.xib */; };
 		1A35FB4F2398996E00A81B9A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A08968F239E130E0079D8BE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1A34325A238D6C5C00A68F62 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A34325B238D6C5C00A68F62 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1A35FB4E2398996E00A81B9A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				1AE52AAB2385B2E000408E47 /* Constants.swift */,
 				1A35FB56239A973100A81B9A /* APIRequestExtension.swift */,
+				1A08968F239E130E0079D8BE /* Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				1A35FB5D239BF3E000A81B9A /* SLError.swift in Sources */,
 				1A34325C238D6C5C00A68F62 /* LoginViewController.swift in Sources */,
 				1AE52AAC2385B2E000408E47 /* Constants.swift in Sources */,
+				1A089690239E130E0079D8BE /* Extensions.swift in Sources */,
 				1A35FB57239A973100A81B9A /* APIRequestExtension.swift in Sources */,
 				1A5479CB238D783400B609BC /* API.swift in Sources */,
 				1A35FB51239A132600A81B9A /* NewAPI.swift in Sources */,
