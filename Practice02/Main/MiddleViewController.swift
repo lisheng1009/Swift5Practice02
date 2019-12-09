@@ -6,9 +6,12 @@
 //  Copyright © 2019 walk-in-minds. All rights reserved.
 //
 
+
+
 import UIKit
 import Moya
 import RxSwift
+import MBProgressHUD
 
 class MiddleViewController: UIViewController {
     var songArray:[SongModel2]?
@@ -20,17 +23,27 @@ class MiddleViewController: UIViewController {
         setupTableView()
         nine()
     }
+    
     func nine(){
+        let mb = MBProgressHUD.showAdded(to: view, animated: true)
+        mb.label.text = "loading"
+        mb.mode = .text
     let provider = MoyaProvider<SongService>()
     provider
         .rx
         .request(.detail(id: "1"))
         .asObservable()
         .mapObjectArray(SongModel2.self, designatedPath: "data.songs").subscribe(onNext: { (res) in
-            print(res!)
+//            print(res!)
+            MBProgressHUD.hide(for: self.view, animated: true)
             self.songArray = res
             self.tableview.reloadData()
             }, onError: { (error) in
+                
+                let mb = MBProgressHUD.showAdded(to: self.view, animated: true)
+                mb.label.text = error.localizedDescription
+                mb.mode = .text
+                mb.hide(animated: true, afterDelay: 3)
 //                print(SLError.SLRequestFailed(error: error))
             }, onCompleted: {
                 

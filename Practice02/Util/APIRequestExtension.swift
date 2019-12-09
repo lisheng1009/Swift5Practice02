@@ -15,6 +15,7 @@ import Moya
 extension Observable {
     
     
+    /// 转模型
     func mapModel<T: HandyJSON>(_ type: T.Type) -> Observable<T?> {
         return self.map { response in
             guard let response = response as? Moya.Response else {
